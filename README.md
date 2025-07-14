@@ -54,8 +54,14 @@ This project uses [uv](https://docs.astral.sh/uv) as the package manager.
 - [ty](https://github.com/astral-sh/ty): A static type checker.
 - [ruff](https://github.com/astral-sh/ruff): An extremely fast Python linter, written in Rust..
 
-## Contributors
+## Instalación de Make en Windows
 
-Special thanks to:
-- [GoldraK](https://github.com/GoldraK).
-- [Alex Lopez](https://github.com/alexlopezc)
+1. Descarga el archivo [`make-3.81.exe`](https://sitsa.dl.sourceforge.net/project/gnuwin32/make/3.81/make-3.81.exe?viasf=1).
+2. Instálalo desde DRV.
+3. Agrega la siguiente ruta a la variable de entorno `PATH` de tu usuario:
+
+  ```
+  C:\Program Files (x86)\GnuWin32\bin
+  ```
+
+Esto permitirá ejecutar `make` desde la terminal.

@@ -6,11 +6,11 @@ help:  ## Show this help.
 		awk 'BEGIN {FS = ":.*?## "}; {printf "%-30s %s\n", $$1, $$2}'
 
 pre-requirements:
-	@scripts/pre-requirements.sh
+	@powershell -ExecutionPolicy Bypass -File scripts/pre-requirements.ps1
 
 .PHONY: local-setup
 local-setup: pre-requirements ## Sets up the local environment (e.g. install git hooks)
-	scripts/local-setup.sh
+	powershell -ExecutionPolicy Bypass -File scripts/local-setup.ps1
 	make install
 
 .PHONY: install
@@ -60,11 +60,11 @@ checks: pre-requirements check-lint check-format check-typing  ## Run all checks
 
 .PHONY: test
 test: pre-requirements ## Run all the tests
-	 PYTHONPATH=. pytest tests -ra -x --durations=5
+	set PYTHONPATH=. && pytest tests -ra -x --durations=5
 
 .PHONY: watch
 watch: pre-requirements ## Run all the tests in watch mode
-	 PYTHONPATH=. ptw --runner "pytest tests -ra -x --durations=5"
+	set PYTHONPATH=. && ptw --runner "pytest tests -ra -x --durations=5"
 
 .PHONY: pre-commit
 pre-commit: pre-requirements check-format check-typing check-lint test

@@ -2,7 +2,7 @@
 
 - This repository is meant to be used as a fast starter point.
 - The Python version is the 3.12.
-- The project has configured a [Github Action](https://github.com/pmareke/python-boilerplate/actions) which runs on every push to the `main` branch.
+- The project has configured a [Github Action](https://github.com/AR-BPS-TaxTech/python-boilerplate/actions) which runs on every push to the `main` branch.
 
 ## Requirements
 

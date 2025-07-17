@@ -1,58 +1,59 @@
-# Python Boilerplate ![status](https://github.com/pmareke/python-boilerplate/actions/workflows/app.yml/badge.svg)
+# Python Boilerplate ![status](https://github.com/AR-BPS-TaxTech/python-boilerplate/actions/workflows/app.yml/badge.svg)
 
-- This repository is meant to be used as a fast starter point.
-- The Python version is the 3.12.
-- The project has configured a [Github Action](https://github.com/AR-BPS-TaxTech/python-boilerplate/actions) which runs on every push to the `main` branch.
+- Este repositorio está diseñado para ser usado como punto de partida rápido.
+- La versión de Python es 3.12.
+- El proyecto tiene configurada una [Github Action](https://github.com/AR-BPS-TaxTech/python-boilerplate/actions) que se ejecuta en cada push a la rama `main`.
 
-## Requirements
+## Requisitos
 
-- You only need to have [uv](https://docs.astral.sh/uv) installed.
+- Necesitas tener [uv](https://docs.astral.sh/uv) instalado.
+- Necesitas tener [Make](https://www.gnu.org/software/make/) instalado (detalles debajo).
 
-## Folder structure
+## Estructura de carpetas
 
-- There is a `tests` folder with the tests files.
-  - In order to add new tests please follow the [pytest](https://docs.pytest.org/en/7.1.x/getting-started.html) recommendations.
-- The production code goes inside the `src` folder.
-- Inside the `scripts` folder you can find the git hooks files.
+- Hay una carpeta `tests` con los archivos de pruebas.
+  - Para agregar nuevas pruebas, por favor sigue las recomendaciones de [pytest](https://docs.pytest.org/en/7.1.x/getting-started.html).
+- El código de producción va dentro de la carpeta `src`.
+- Dentro de la carpeta `scripts` puedes encontrar los archivos de git hooks.
 
-## Project commands
+## Comandos del proyecto
 
-The project uses [Makefiles](https://www.gnu.org/software/make/manual/html_node/Introduction.html) to run the most common tasks:
+El proyecto usa [Makefiles](https://www.gnu.org/software/make/manual/html_node/Introduction.html) para ejecutar las tareas más comunes:
 
-- `add-package package=XXX`: Installs the package XXX in the app, ex: `make install package=requests`.
-- `build`: Builds the app.
-- `check-format`: Checks the code format.
-- `check-lint`: Checks the code style.
-- `check-typing`: Runs a static analyzer over the code in order to find issues.
-- `format`: Formats the code.
-- `lint`: Lints the code.
-- `help` : Shows this help.
-- `install`: Installs the app packages.
-- `local-setup`: Sets up the local environment (e.g. install git hooks).
-- `run`: Runs the app.
-- `test`: Run all the tests.
-- `update`: Updates the app packages.
-- `watch`: Run all the tests in watch mode.
+- `add-package package=XXX`: Instala el paquete XXX en la aplicación, ej: `make install package=requests`.
+- `build`: Construye la aplicación.
+- `check-format`: Verifica el formato del código.
+- `check-lint`: Verifica el estilo del código.
+- `check-typing`: Ejecuta un analizador estático sobre el código para encontrar problemas.
+- `format`: Formatea el código.
+- `lint`: Analiza el código.
+- `help` : Muestra esta ayuda.
+- `install`: Instala los paquetes de la aplicación.
+- `local-setup`: Configura el entorno local (ej: instala git hooks).
+- `run`: Ejecuta la aplicación.
+- `test`: Ejecuta todas las pruebas.
+- `update`: Actualiza los paquetes de la aplicación.
+- `watch`: Ejecuta todas las pruebas en modo observación.
 
-**Important: Please run the `make local-setup` command before starting with the code.**
+**Importante: Por favor ejecuta el comando `make local-setup` antes de comenzar con el código.**
 
-_In order to create a commit you have to pass the pre-commit phase which runs the check and test commands._
+_Para crear un commit tienes que pasar la fase de pre-commit que ejecuta los comandos check y test._
 
-## Packages
+## Paquetes
 
-This project uses [uv](https://docs.astral.sh/uv) as the package manager.
+Este proyecto usa [uv](https://docs.astral.sh/uv) como gestor de paquetes.
 
-### Testing
+### Pruebas
 
-- [pytest](https://docs.pytest.org/en/7.1.x/contents.html): Testing runner.
-- [doublex](https://github.com/davidvilla/python-doublex): Powerful test doubles framework for Python.
-- [expects](https://expects.readthedocs.io/en/stable/): An expressive and extensible TDD/BDD assertion library for Python..
-- [doublex-expects](https://github.com/jaimegildesagredo/doublex-expects): A matchers library for the Expects assertion library.
+- [pytest](https://docs.pytest.org/en/7.1.x/contents.html): Ejecutor de pruebas.
+- [doublex](https://github.com/davidvilla/python-doublex): Framework poderoso de dobles de prueba para Python.
+- [expects](https://expects.readthedocs.io/en/stable/): Una librería de aserciones expresiva y extensible para TDD/BDD en Python.
+- [doublex-expects](https://github.com/jaimegildesagredo/doublex-expects): Una librería de matchers para la librería de aserciones Expects.
 
-### Code style
+### Estilo de código
 
-- [ty](https://github.com/astral-sh/ty): A static type checker.
-- [ruff](https://github.com/astral-sh/ruff): An extremely fast Python linter, written in Rust..
+- [ty](https://github.com/astral-sh/ty): Un verificador de tipos estático.
+- [ruff](https://github.com/astral-sh/ruff): Un linter de Python extremadamente rápido, escrito en Rust.
 
 ## Instalación de Make en Windows
 
